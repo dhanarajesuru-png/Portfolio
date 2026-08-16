@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('portfolio-theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+  
+  <!-- Primary Meta Tags -->
+  <title>Esuru Dhanaraj | Generative AI Engineer & Production LLM Architect</title>
+  <meta name="title" content="Esuru Dhanaraj | Generative AI Engineer & Production LLM Architect" />
+  <meta name="description" content="Recruiter-focused portfolio of Esuru Dhanaraj - Generative AI Engineer (MCA in Gen AI @ SRM University, 8.76 CGPA). Specializing in Autonomous Multi-Agent DAGs, Gemini GraphRAG, and High-Concurrency FastAPI Backends." />
+  <meta name="keywords" content="Esuru Dhanaraj, Generative AI Engineer, LangGraph, Gemini API, GraphRAG, Multi-Agent Systems, FastAPI, SRM University, Machine Learning, Data Science" />
+  <meta name="author" content="Esuru Dhanaraj" />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Esuru Dhanaraj | Generative AI Engineer & Production LLM Architect" />
+  <meta property="og:description" content="Specializing in Autonomous Multi-Agent DAGs, Gemini GraphRAG Architectures, and Secure Full-Stack AI Applications." />
+  <meta property="og:url" content="https://github.com/dhanarajesuru-png" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css?v=32.0" />
+  <link rel="stylesheet" href="css/components.css?v=32.0" />
+  <link rel="stylesheet" href="css/animations.css?v=32.0" />
+</head>
+<body>
+
+  <!-- Ambient Dynamic Canvas Background -->
+  <canvas id="neural-canvas"></canvas>
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+  <div class="ambient-glow ambient-glow-3"></div>
+
+  <!-- =========================================================================
+       Navigation Header
+       ========================================================================= -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-wrapper">
+      <a href="#" class="brand-logo" id="nav-brand">
+        <div class="logo-badge">ED</div>
+        <span>Esuru <span class="gradient-text">Dhanaraj</span></span>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#internships" class="nav-link">Experience</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#connect" class="nav-link">Profiles</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle-btn" title="Switch to Dark Mode" aria-label="Toggle Theme">
+          <span id="theme-icon">☀️</span>
+        </button>
+        <button class="btn btn-secondary btn-sm open-resume-btn">
+          <span>📄 Resume</span>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm">Get in Touch</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       Hero & Executive Profile Template
+       ========================================================================= -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content reveal-on-scroll">
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          <span>Open to GenAI, Agentic & ML Roles (Immediate)</span>
+        </div>
+
+        <div class="hero-greeting">
+          ENGINEERING PRODUCTION AI SYSTEMS
+        </div>
+
+        <h1 class="hero-name">
+          Esuru <span class="gradient-text">Dhanaraj</span>
+        </h1>
+
+        <p class="hero-tagline">
+          <strong>Generative AI Engineer & Production LLM Architect</strong> specializing in 
+          <strong>Autonomous Multi-Agent DAGs</strong>, 
+          <strong>Gemini-powered GraphRAG Architectures</strong>, and 
+          <strong>Secure Full-Stack AI Applications</strong> with high-concurrency FastAPI backends.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#projects" class="btn btn-primary">
+            <span>Explore Projects</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <button class="btn btn-secondary open-resume-btn">
+            <span>📄 View Resume</span>
+          </button>
+          <a href="#contact" class="btn btn-secondary">
+            <span>Contact Me</span>
+          </a>
+        </div>
+
+        <div class="hero-social-links">
+          <a href="https://github.com/dhanarajesuru-png" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub Profile" id="hero-github-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/dhanaraj-esuru" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn Profile" id="hero-linkedin-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="mailto:dhanarajesuru@gmail.com" class="social-icon-btn" title="Send Email" id="hero-email-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+          <a href="tel:+917815809310" class="social-icon-btn" title="Direct Phone / WhatsApp" id="hero-phone-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Profile Photo Showcase (Whole-Card Elastic Lanyard Model) -->
+      <div class="hero-photo-wrapper reveal-on-scroll" id="hero-photo-wrapper">
+        <div class="hero-photo-glow"></div>
+        
+        <!-- Fixed Top Lanyard Mount / Ceiling Anchor -->
+        <div class="id-lanyard-mount" id="id-lanyard-mount">
+          <div class="id-lanyard-peg"></div>
+          <div class="id-lanyard-mount-ring"></div>
+        </div>
+
+        <!-- Full-Viewport SVG for Elastic Rubber-Band Lanyard Tether -->
+        <svg class="lanyard-elastic-svg" id="lanyard-elastic-svg">
+          <defs>
+            <linearGradient id="lanyardRibbonGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#0e1726" />
+              <stop offset="20%" stop-color="#1e293b" />
+              <stop offset="50%" stop-color="#0f172a" />
+              <stop offset="80%" stop-color="#1e293b" />
+              <stop offset="100%" stop-color="#0e1726" />
+            </linearGradient>
+            <linearGradient id="lanyardNeonGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#00f2fe" />
+              <stop offset="50%" stop-color="#38bdf8" />
+              <stop offset="100%" stop-color="#818cf8" />
+            </linearGradient>
+            <filter id="lanyardGlow" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="5" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+          </defs>
+          <path id="lanyard-shadow-path" class="lanyard-shadow" d="" />
+          <path id="lanyard-band-path" class="lanyard-band" d="" />
+          <path id="lanyard-neon-path" class="lanyard-neon-stripe" d="" />
+        </svg>
+
+        <!-- Main ID Badge Card (Whole-Card Elastic Draggable Body) -->
+        <div class="id-card-container id-card-elastic" id="hero-photo-card" title="Click & drag the ID card anywhere on your screen!">
+          
+          <!-- Card Lanyard Metallic Clip Attachment -->
+          <div class="id-card-clip-mount" id="id-card-clip-mount">
+            <div class="id-clip-metal-bracket"></div>
+            <div class="id-clip-eyelet"></div>
+          </div>
+
+          <!-- Photo Inner Frame (Full uncropped 3:4 photo) -->
+          <div class="id-photo-inner" id="id-photo-inner">
+            <img src="assets/profile.jpg" alt="Esuru Dhanaraj - Generative AI Engineer" class="hero-photo-img" id="hero-profile-img" draggable="false" />
+            <div class="id-scan-line"></div>
+          </div>
+
+          <!-- Card Identity Footer & Barcode Tag -->
+          <div class="id-card-footer">
+            <div class="id-card-identity">
+              <div class="id-badge-name">ESURU DHANARAJ</div>
+            </div>
+            
+            <div class="id-card-meta">
+              <div class="id-barcode">
+                <span class="barcode-lines">||| | ||||| || |||</span>
+                <span class="barcode-num">ID: 876-MCA-GEN-AI</span>
+              </div>
+              <div class="id-status-badge">
+                <span class="id-status-dot"></span>
+                <span>VERIFIED</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics Bar & 30-Second Executive Summary -->
+  <div class="container">
+    <div class="metrics-bar reveal-on-scroll">
+      <div class="metrics-grid">
+        <div class="metric-item">
+          <div class="metric-value">8.76<span class="unit">/10</span></div>
+          <div class="metric-label">MCA CGPA @ SRM University</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value">4<span class="unit"></span></div>
+          <div class="metric-label">Industry Internships (AWS, Palo Alto, Ulearn)</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value">7<span class="unit">+</span></div>
+          <div class="metric-label">Validated Industry Credentials</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value">94.2<span class="unit">%</span></div>
+          <div class="metric-label">Deep Learning Model Diagnostic Accuracy</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 30-Second Executive Pitch Card for Recruiters -->
+    <div class="pitch-card reveal-on-scroll">
+      <div class="pitch-header">
+        <div class="pitch-title-wrap">
+          <span style="font-size:1.5rem;">⏱️</span>
+          <div>
+            <h3>30-Second Recruiter Executive Summary</h3>
+            <span style="font-size:0.85rem; color:var(--text-secondary);">Direct technical value proposition for Engineering Leads & Hiring Managers</span>
+          </div>
+        </div>
+        <span class="pitch-badge">🟢 AVAILABLE FOR GENAI / ML / BACKEND ROLES</span>
+      </div>
+
+      <div class="pitch-grid">
+        <div class="pitch-item">
+          <div class="pitch-label">Core Specialization</div>
+          <div class="pitch-value">Autonomous Multi-Agent DAGs (LangGraph), Google Gemini GraphRAG, Asynchronous FastAPI Systems, SQLite WAL Caching & AES-256 Security.</div>
+        </div>
+        <div class="pitch-item">
+          <div class="pitch-label">Target Roles</div>
+          <div class="pitch-value">Generative AI Engineer, Agentic AI Developer, LLM Systems Engineer, Machine Learning Engineer, Python/FastAPI Backend Developer.</div>
+        </div>
+        <div class="pitch-item">
+          <div class="pitch-label">Key Differentiator</div>
+          <div class="pitch-value">Bridges deep learning neural classifiers with autonomous agent state graphs, sub-48ms inference latency, and zero-trust client-side encryption.</div>
+        </div>
+        <div class="pitch-item">
+          <div class="pitch-label">Education & Location</div>
+          <div class="pitch-value">Master of Computer Applications in Gen AI (SRM University, 8.76 CGPA). Available for Immediate On-Site / Hybrid / Remote employment.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       SECTION CUT DIVIDER: SKILLS
+       ========================================================================= -->
+  <div class="section-cut-divider">
+    <div class="section-cut-line"></div>
+    <div class="section-cut-badge">⚡ SKILLS ARSENAL</div>
+  </div>
+
+  <!-- =========================================================================
+       Technical Skills Template (Bento-Style)
+       ========================================================================= -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-tag">⚡ Technical Capabilities</div>
+        <h2 class="section-title">Technical <span class="gradient-text">Skills Arsenal</span></h2>
+        <p class="section-subtitle">Structured competencies spanning generative AI orchestration, deep learning architectures, scalable backends, and cloud infrastructure.</p>
+      </div>
+
+      <div class="skills-tabs-container reveal-on-scroll">
+        <button class="skill-tab-btn active" data-filter="all">All Skills</button>
+        <button class="skill-tab-btn" data-filter="agentic">GenAI & Agents</button>
+        <button class="skill-tab-btn" data-filter="ml">Deep Learning & NLP</button>
+        <button class="skill-tab-btn" data-filter="fullstack">Backend & APIs</button>
+        <button class="skill-tab-btn" data-filter="database">Databases & Graphs</button>
+        <button class="skill-tab-btn" data-filter="cloud">Cloud & Security</button>
+        <button class="skill-tab-btn" data-filter="programming">Programming & Core</button>
+      </div>
+
+      <div class="skills-grid" id="skills-grid">
+        
+        <!-- Skill: GenAI & Autonomous Agents -->
+        <div class="skill-card reveal-on-scroll" data-category="agentic">
+          <div class="skill-card-header">
+            <div class="skill-card-icon">🤖</div>
+            <div>
+              <h3 class="skill-card-title">Generative AI & Autonomous Agents</h3>
+              <span style="font-size:0.8rem; color:var(--accent-cyan);">Stateful Graphs & RAG</span>
+            </div>
+          </div>
+          <p class="skill-card-desc">
+            Architecting stateful multi-agent DAGs with automated tool routing, dynamic reflection loops, corrective retrieval (CRAG), and structured schema validation.
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag highlight">Google Gemini API</span>
+            <span class="skill-tag highlight">LangGraph</span>
+            <span class="skill-tag highlight">Multi-Agent DAGs</span>
+            <span class="skill-tag">LangChain</span>
+            <span class="skill-tag">Corrective RAG (CRAG)</span>
+            <span class="skill-tag">Prompt Engineering</span>
+            <span class="skill-tag">Structured Outputs (Pydantic)</span>
+          </div>
+        </div>
+
+        <!-- Skill: Deep Learning & Applied NLP -->
+        <div class="skill-card reveal-on-scroll" data-category="ml">
+          <div class="skill-card-header">
+            <div class="skill-card-icon">🧠</div>
+            <div>
+              <h3 class="skill-card-title">Deep Learning & Applied NLP</h3>
+              <span style="font-size:0.8rem; color:var(--accent-cyan);">PyTorch & Neural Models</span>
+            </div>
+          </div>
+          <p class="skill-card-desc">
+            Training and fine-tuning neural classifiers, dense semantic embedding models, Hugging Face transformers, and statistical machine learning pipelines.
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag highlight">PyTorch</span>
+            <span class="skill-tag highlight">Transformers</span>
+            <span class="skill-tag">Hugging Face</span>
+            <span class="skill-tag">Dense Embeddings</span>
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">NumPy & Pandas</span>
+            <span class="skill-tag">Computer Vision</span>
+          </div>
+        </div>
+
+        <!-- Skill: High-Concurrency Backend & APIs -->
+        <div class="skill-card reveal-on-scroll" data-category="fullstack">
+          <div class="skill-card-header">
+            <div class="skill-card-icon">⚡</div>
+            <div>
+              <h3 class="skill-card-title">High-Concurrency Backend & APIs</h3>
+              <span style="font-size:0.8rem; color:var(--accent-cyan);">Asynchronous Architectures</span>
+            </div>
+          </div>
+          <p class="skill-card-desc">
+            Building streaming SSE REST endpoints, asynchronous worker queues, connection pooling, and SQLite WAL caching layers for high-throughput AI systems.
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag highlight">FastAPI (Async)</span>
+            <span class="skill-tag highlight">Python 3.11+</span>
+            <span class="skill-tag">Node.js & Express</span>
+            <span class="skill-tag">RESTful APIs</span>
+            <span class="skill-tag">Server-Sent Events (SSE)</span>
+            <span class="skill-tag">Progressive Web Apps (PWA)</span>
+          </div>
+        </div>
+
+        <!-- Skill: Databases, Graphs & Vector Stores -->
+        <div class="skill-card reveal-on-scroll" data-category="database">
+          <div class="skill-card-header">
+            <div class="skill-card-icon">🗄️</div>
+            <div>
+              <h3 class="skill-card-title">Databases, Graphs & Vector Stores</h3>
+              <span style="font-size:0.8rem; color:var(--accent-cyan);">Multi-Hop & Vector Retrieval</span>
+            </div>
+          </div>
+          <p class="skill-card-desc">
+            Constructing dynamic property graphs for multi-hop entity traversal alongside high-dimensional dense vector indexing and hybrid fusion.
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag highlight">Neo4j (Cypher)</span>
+            <span class="skill-tag highlight">Qdrant</span>
+            <span class="skill-tag">Milvus</span>
+            <span class="skill-tag">SQLite (WAL Mode)</span>
+            <span class="skill-tag">Redis</span>
+            <span class="skill-tag">Reciprocal Rank Fusion</span>
+          </div>
+        </div>
+
+        <!-- Skill: Cloud, Security & LLMOps -->
+        <div class="skill-card reveal-on-scroll" data-category="cloud">
+          <div class="skill-card-header">
+            <div class="skill-card-icon">🛡️</div>
+            <div>
+              <h3 class="skill-card-title">Cloud Infrastructure, Security & LLMOps</h3>
+              <span style="font-size:0.8rem; color:var(--accent-cyan);">Zero-Trust & Deployment</span>
+            </div>
+          </div>
+          <p class="skill-card-desc">
+            Deploying containerized AI microservices on AWS, measuring LLM faithfulness with Ragas, and engineering AES-256 client-side cryptographic security.
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag highlight">AWS (Bedrock, EC2, S3)</span>
+            <span class="skill-tag highlight">AES-256 Encryption</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Ragas Evaluation</span>
+            <span class="skill-tag">IAM Security</span>
+            <span class="skill-tag">Zero-Trust Guardrails</span>
+          </div>
+        </div>
+
+        <!-- Skill: Core Programming & Fundamentals -->
+        <div class="skill-card reveal-on-scroll" data-category="programming">
+          <div class="skill-card-header">
+            <div class="skill-card-icon">🐍</div>
+            <div>
+              <h3 class="skill-card-title">Core Programming & Fundamentals</h3>
+              <span style="font-size:0.8rem; color:var(--accent-cyan);">Algorithmics & Systems</span>
+            </div>
+          </div>
+          <p class="skill-card-desc">
+            Writing robust, strictly typed algorithms with algorithmic complexity optimization, memory efficiency, and clean object-oriented / functional paradigms.
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag highlight">Python 3</span>
+            <span class="skill-tag highlight">C Programming</span>
+            <span class="skill-tag">JavaScript (ES6+)</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Data Structures & Algorithms</span>
+            <span class="skill-tag">Linux / Bash</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION CUT DIVIDER: PROJECTS
+       ========================================================================= -->
+  <div class="section-cut-divider">
+    <div class="section-cut-line"></div>
+    <div class="section-cut-badge">🚀 FEATURED PROJECTS</div>
+  </div>
+
+  <!-- =========================================================================
+       Engineering Projects Template (Split-View)
+       ========================================================================= -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-tag">🚀 Production AI Implementations</div>
+        <h2 class="section-title">Featured <span class="gradient-text">Engineering Projects</span></h2>
+        <p class="section-subtitle">Real-world AI systems built with stateful multi-agent DAGs, hybrid vector search, neural vision models, and robust security guardrails.</p>
+      </div>
+
+      <div class="projects-container">
+
+        <!-- Project: Agro AI-suite -->
+        <div class="project-card-featured reveal-on-scroll">
+          <div class="project-card-content">
+            <div class="project-card-badge">⭐ FEATURED / AGENTIC AGRONOMY & RAG</div>
+            <h3 class="project-card-title">Agro AI-suite: AI-Powered Smart Farming Platform</h3>
+            <p class="project-card-summary">
+              An intelligent agricultural diagnostics ecosystem combining fine-tuned neural pathology models with an asynchronous Google Gemini RAG agronomy advisory pipeline.
+            </p>
+
+            <!-- Structured Recruiter Specification -->
+            <div class="project-recruiter-spec">
+              <div class="project-spec-row">
+                <span class="spec-tag problem">🎯 Problem</span>
+                <p class="spec-text">Remote farming communities face devastating crop losses due to slow disease diagnosis and lack of immediate agronomy advisory.</p>
+              </div>
+              <div class="project-spec-row">
+                <span class="spec-tag solution">💡 Solution</span>
+                <p class="spec-text">Built an end-to-end intelligent agricultural management platform pairing a fine-tuned PyTorch vision model with Google Gemini RAG.</p>
+              </div>
+              <div class="project-spec-row">
+                <span class="spec-tag contribution">👤 Contribution</span>
+                <p class="spec-text">Developed neural classification pipeline, designed the async FastAPI RAG advisory with SQLite WAL caching, and built the offline PWA interface.</p>
+              </div>
+            </div>
+
+            <!-- Key Features -->
+            <div class="project-features-block">
+              <div class="features-heading">⚡ Key Engineering Features</div>
+              <ul class="project-highlights-list">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Deep Learning Diagnostics:</strong> Neural classifiers achieving 94.2% accuracy across 14 plant disease classes with sub-48ms latency.</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Gemini RAG Advisory:</strong> Contextual agronomy recommendations streaming localized treatment guidelines and soil data integration.</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>High-Throughput Backend:</strong> FastAPI backend with rate limiting, background async workers, SQLite WAL caching, and offline PWA support.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Quantitative Stats -->
+            <div class="project-stats-strip">
+              <div class="p-stat">
+                <span class="p-stat-val">94.2%</span>
+                <span class="p-stat-lbl">Diagnostic Accuracy</span>
+              </div>
+              <div class="p-stat">
+                <span class="p-stat-val">&lt;48ms</span>
+                <span class="p-stat-lbl">Inference Latency</span>
+              </div>
+              <div class="p-stat">
+                <span class="p-stat-val">14 Classes</span>
+                <span class="p-stat-lbl">Crop Pathologies</span>
+              </div>
+            </div>
+
+            <!-- Technologies Used -->
+            <div class="project-tech-pills">
+              <span class="tech-pill">PyTorch</span>
+              <span class="tech-pill">Google Gemini RAG</span>
+              <span class="tech-pill">FastAPI Async</span>
+              <span class="tech-pill">SQLite WAL</span>
+              <span class="tech-pill">React / PWA</span>
+              <span class="tech-pill">Docker</span>
+            </div>
+
+            <!-- Project Actions -->
+            <div class="project-card-actions">
+              <button class="btn btn-primary btn-sm open-modal-btn" data-modal="agro">
+                <span>View System Architecture</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </button>
+              <a href="https://github.com/dhanarajesuru-png" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>GitHub Repository</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card-visual">
+            <!-- Interactive Neural Classifier Simulator -->
+            <div class="leaf-classifier-box">
+              <div style="display:flex; align-items:center; justify-content:space-between;">
+                <span style="font-family:var(--font-mono); font-size:0.8rem; color:#34d399; font-weight:600;">🔬 NEURAL INFERENCE TESTER</span>
+                <span style="font-size:0.75rem; color:#94a3b8; font-family:var(--font-mono);">Latency: 48ms</span>
+              </div>
+              
+              <div class="leaf-samples-row">
+                <button class="leaf-sample-btn active" data-sample="apple">🍎 Apple Scab</button>
+                <button class="leaf-sample-btn" data-sample="tomato">🍅 Tomato Blight</button>
+                <button class="leaf-sample-btn" data-sample="corn">🌽 Healthy Corn</button>
+              </div>
+
+              <div class="leaf-diagnosis-output" id="leaf-diagnosis-output">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <strong id="leaf-disease-name" style="color:#ffffff !important; font-size:1rem; font-weight:700;">Apple Scab (Venturia inaequalis)</strong>
+                  <span id="leaf-confidence" style="color:#34d399; font-family:var(--font-mono); font-weight:bold;">96.4% Match</span>
+                </div>
+                <p id="leaf-advisory" style="color:#ffffff !important; font-size:0.9rem; margin:0; line-height:1.55;">
+                  <b style="color:#38bdf8 !important;">Gemini Advisory:</b> Apply targeted captan or myclobutanil fungicide spray at pre-bloom stage. Ensure canopy pruning for airflow.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project: Aura Mind -->
+        <div class="project-card-regular reveal-on-scroll">
+          <div class="project-card-content">
+            <div class="project-card-badge" style="background: rgba(138, 43, 226, 0.15); color: #c084fc;">🧠 AI HEALTHCARE & PRIVACY</div>
+            <h3 class="project-card-title">Aura Mind: AI Clinical Mental Health Companion</h3>
+            <p class="project-card-summary">
+              A clinical mental wellness companion equipped with dual-layer safety guardrails, offline CBT/DBT therapeutic tooling, and speech-to-text mood journaling.
+            </p>
+
+            <!-- Structured Recruiter Specification -->
+            <div class="project-recruiter-spec">
+              <div class="project-spec-row">
+                <span class="spec-tag problem">🎯 Problem</span>
+                <p class="spec-text">Mental health conversational agents risk critical failures during user crisis moments and expose private emotional records.</p>
+              </div>
+              <div class="project-spec-row">
+                <span class="spec-tag solution">💡 Solution</span>
+                <p class="spec-text">Engineered a privacy-first conversational companion with real-time sentiment guardrails, offline CBT retrieval, and AES-256 encryption.</p>
+              </div>
+              <div class="project-spec-row">
+                <span class="spec-tag contribution">👤 Contribution</span>
+                <p class="spec-text">Architected the crisis interception guardrail filters, built the TF-IDF offline exercise matcher, and developed AES-256 client encryption.</p>
+              </div>
+            </div>
+
+            <!-- Key Features -->
+            <div class="project-features-block">
+              <div class="features-heading">⚡ Key Engineering Features</div>
+              <ul class="project-highlights-list">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Dual-Layer Guardrails:</strong> Real-time sentiment filters and crisis regex scanners intercepting self-harm intents with emergency hotline routing.</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>TF-IDF Clinical Tool RAG:</strong> Offline psychological retrieval matching user mood triggers with structured Cognitive Behavioral Therapy exercises.</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Client-Side Security:</strong> AES-256 encryption for mood logs, voice journaling via Web Speech API, and clinical PDF report exports.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Quantitative Stats -->
+            <div class="project-stats-strip">
+              <div class="p-stat">
+                <span class="p-stat-val">100%</span>
+                <span class="p-stat-lbl">Client Sovereignty</span>
+              </div>
+              <div class="p-stat">
+                <span class="p-stat-val">Dual-Layer</span>
+                <span class="p-stat-lbl">Crisis Guardrails</span>
+              </div>
+              <div class="p-stat">
+                <span class="p-stat-val">0-Network</span>
+                <span class="p-stat-lbl">Offline CBT Retrieval</span>
+              </div>
+            </div>
+
+            <!-- Technologies Used -->
+            <div class="project-tech-pills">
+              <span class="tech-pill">React</span>
+              <span class="tech-pill">Node.js & Express</span>
+              <span class="tech-pill">Google Gemini API</span>
+              <span class="tech-pill">TF-IDF RAG</span>
+              <span class="tech-pill">AES-256</span>
+              <span class="tech-pill">SQLite</span>
+            </div>
+
+            <!-- Project Actions -->
+            <div class="project-card-actions">
+              <button class="btn btn-primary btn-sm open-modal-btn" data-modal="aura">
+                <span>View System Architecture</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </button>
+              <a href="https://github.com/dhanarajesuru-png" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>GitHub Repository</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card-visual" style="display:flex; align-items:center; justify-content:center;">
+            <div style="background:#111622; border:1px solid rgba(138, 43, 226, 0.35); border-radius:14px; padding:2.25rem; width:100%; text-align:center;">
+              <div style="font-size:3.5rem; margin-bottom:1rem;">🛡️</div>
+              <div style="font-weight:700; color:#ffffff !important; font-size:1.25rem; margin-bottom:0.5rem; letter-spacing: 0.02em;">Dual-Layer Safety & CBT Engine</div>
+              <p style="font-size:0.95rem; color:#f1f5f9 !important; line-height:1.65; margin:0;">
+                Zero-trust clinical containment, encrypted patient mood tracking, and automated PDF report generator for mental wellness.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project: Autonomous Multi-Agent DAG & Corrective RAG -->
+        <div class="project-card-regular reveal-on-scroll">
+          <div class="project-card-content">
+            <div class="project-card-badge" style="background: rgba(0, 242, 254, 0.15); color: #00f2fe;">🤖 LANGGRAPH & AGENTIC DAGs</div>
+            <h3 class="project-card-title">Autonomous Multi-Agent DAG & Corrective RAG</h3>
+            <p class="project-card-summary">
+              A stateful multi-agent system built with LangGraph featuring dynamic tool dispatching, reflection loops, evaluator nodes, and hallucination reduction.
+            </p>
+
+            <!-- Structured Recruiter Specification -->
+            <div class="project-recruiter-spec">
+              <div class="project-spec-row">
+                <span class="spec-tag problem">🎯 Problem</span>
+                <p class="spec-text">Standard LLM RAG suffers hallucinations on complex multi-hop queries and lacks self-reflection to verify retrieved facts.</p>
+              </div>
+              <div class="project-spec-row">
+                <span class="spec-tag solution">💡 Solution</span>
+                <p class="spec-text">Designed a cyclical LangGraph state machine with document relevance grading nodes, query rewriting, and web search fallbacks.</p>
+              </div>
+              <div class="project-spec-row">
+                <span class="spec-tag contribution">👤 Contribution</span>
+                <p class="spec-text">Architected state graph schema, programmed evaluator nodes for CRAG, and implemented structured tool routing with Pydantic.</p>
+              </div>
+            </div>
+
+            <!-- Key Features -->
+            <div class="project-features-block">
+              <div class="features-heading">⚡ Key Engineering Features</div>
+              <ul class="project-highlights-list">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>State Persistence & Branching:</strong> Message graph trajectory checkpoints enabling state recovery across multi-step execution graphs.</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Corrective RAG (CRAG):</strong> Evaluator nodes grading retrieval relevance before generation to eliminate hallucinations in real-time.</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Deterministic Tool Dispatch:</strong> Structured Pydantic validation schemas with automatic fallback handlers for error recovery.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Quantitative Stats -->
+            <div class="project-stats-strip">
+              <div class="p-stat">
+                <span class="p-stat-val">92%</span>
+                <span class="p-stat-lbl">Hallucination Reduction</span>
+              </div>
+              <div class="p-stat">
+                <span class="p-stat-val">Sub-2s</span>
+                <span class="p-stat-lbl">Multi-Hop Resolution</span>
+              </div>
+              <div class="p-stat">
+                <span class="p-stat-val">4 Nodes</span>
+                <span class="p-stat-lbl">Agent State Machine</span>
+              </div>
+            </div>
+
+            <!-- Technologies Used -->
+            <div class="project-tech-pills">
+              <span class="tech-pill">LangGraph</span>
+              <span class="tech-pill">Python 3.11</span>
+              <span class="tech-pill">Gemini 1.5 Pro</span>
+              <span class="tech-pill">Qdrant Vector DB</span>
+              <span class="tech-pill">Pydantic</span>
+              <span class="tech-pill">Tavily Search</span>
+            </div>
+
+            <!-- Project Actions -->
+            <div class="project-card-actions">
+              <button class="btn btn-primary btn-sm open-modal-btn" data-modal="vision">
+                <span>View System Architecture</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </button>
+              <a href="https://github.com/dhanarajesuru-png" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>GitHub Repository</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card-visual" style="display:flex; align-items:center; justify-content:center;">
+            <div style="background:#111622; border:1px solid rgba(0, 242, 254, 0.35); border-radius:14px; padding:2.25rem; width:100%; text-align:center;">
+              <div style="font-size:3.5rem; margin-bottom:1rem;">🕸️</div>
+              <div style="font-weight:700; color:#ffffff !important; font-size:1.25rem; margin-bottom:0.5rem; letter-spacing: 0.02em;">LangGraph Multi-Agent DAG</div>
+              <p style="font-size:0.95rem; color:#f1f5f9 !important; line-height:1.65; margin:0;">
+                Cyclical state machine with document evaluation nodes, query rewriting, and self-correcting RAG for hallucination-free generation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION CUT DIVIDER: EXPERIENCE
+       ========================================================================= -->
+  <div class="section-cut-divider">
+    <div class="section-cut-line"></div>
+    <div class="section-cut-badge">💼 EXPERIENCE TIMELINE</div>
+  </div>
+
+  <!-- =========================================================================
+       Experience Timeline Template
+       ========================================================================= -->
+  <section class="section" id="internships">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-tag">💼 Professional Track</div>
+        <h2 class="section-title">Industry <span class="gradient-text">Internship Timeline</span></h2>
+        <p class="section-subtitle">Chronological progression across Generative AI, Cloud Systems, Cyber Security, and Machine Learning engineering.</p>
+      </div>
+
+      <div class="timeline-stream">
+        
+        <!-- Timeline Item: Gen AI -->
+        <div class="timeline-card reveal-on-scroll">
+          <div class="timeline-node">🤖</div>
+          <div class="timeline-body">
+            <div class="timeline-header">
+              <h3 class="timeline-role">Gen AI Virtual Internship</h3>
+              <span class="timeline-badge">EduSkills & AWS Academy</span>
+            </div>
+            <div class="timeline-org">Powered by EduSkills Foundation (Supported by AICTE & AWS Academy)</div>
+            <p class="timeline-desc">
+              Trained on AWS Generative AI services, foundation model fine-tuning, prompt engineering pipelines, and cloud-native AI deployments.
+            </p>
+            <div class="timeline-skills">
+              <span>AWS Bedrock</span>
+              <span>Generative AI</span>
+              <span>Prompt Engineering</span>
+              <span>LLMs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item: Cyber Security -->
+        <div class="timeline-card reveal-on-scroll">
+          <div class="timeline-node">🛡️</div>
+          <div class="timeline-body">
+            <div class="timeline-header">
+              <h3 class="timeline-role">Cyber Security Virtual Internship</h3>
+              <span class="timeline-badge">EduSkills & Palo Alto</span>
+            </div>
+            <div class="timeline-org">Powered by EduSkills Foundation (Supported by AICTE & Palo Alto Networks)</div>
+            <p class="timeline-desc">
+              Studied enterprise network security, cloud threat detection, zero-trust architectures, and application-level encryption standards.
+            </p>
+            <div class="timeline-skills">
+              <span>Network Security</span>
+              <span>Palo Alto Networks</span>
+              <span>Zero-Trust</span>
+              <span>AES-256</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item: AWS Cloud -->
+        <div class="timeline-card reveal-on-scroll">
+          <div class="timeline-node">☁️</div>
+          <div class="timeline-body">
+            <div class="timeline-header">
+              <h3 class="timeline-role">AWS Cloud Computing Intern</h3>
+              <span class="timeline-badge">Adhoc Network Tech</span>
+            </div>
+            <div class="timeline-org">Adhoc Network Tech Company</div>
+            <p class="timeline-desc">
+              Engineered cloud infrastructure, managed AWS EC2, S3, IAM policies, and architected asynchronous serverless workflows.
+            </p>
+            <div class="timeline-skills">
+              <span>AWS EC2 / S3</span>
+              <span>Cloud Architecture</span>
+              <span>IAM Security</span>
+              <span>Serverless</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item: AIML Developer -->
+        <div class="timeline-card reveal-on-scroll">
+          <div class="timeline-node">📊</div>
+          <div class="timeline-body">
+            <div class="timeline-header">
+              <h3 class="timeline-role">AIML Developer Internship</h3>
+              <span class="timeline-badge">Ulearn / CU Denver</span>
+            </div>
+            <div class="timeline-org">Ulearn (Supported by University of Colorado Denver)</div>
+            <p class="timeline-desc">
+              Developed supervised & unsupervised machine learning pipelines using Python, NumPy, Pandas, Scikit-learn, and neural networks.
+            </p>
+            <div class="timeline-skills">
+              <span>Python</span>
+              <span>Scikit-learn</span>
+              <span>Machine Learning</span>
+              <span>Neural Networks</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION CUT DIVIDER: CERTIFICATIONS
+       ========================================================================= -->
+  <div class="section-cut-divider">
+    <div class="section-cut-line"></div>
+    <div class="section-cut-badge">📜 CERTIFICATION VAULT</div>
+  </div>
+
+  <!-- =========================================================================
+       Certifications Template
+       ========================================================================= -->
+  <section class="section" id="certifications">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-tag">📜 Validated Credentials</div>
+        <h2 class="section-title">Professional <span class="gradient-text">Certifications</span></h2>
+        <p class="section-subtitle">Verified industry credentials from Amazon Web Services, IBM, KodeKloud, Cisco, Infosys, and SRM University.</p>
+      </div>
+
+      <div class="certs-grid">
+        
+        <div class="cert-card reveal-on-scroll">
+          <div class="cert-icon">☁️</div>
+          <div class="cert-info">
+            <div class="cert-name">Fundamentals of Generative AI for Beginners</div>
+            <div class="cert-issuer">Amazon Web Services (AWS)</div>
+            <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer" class="cert-verify-link">✓ Verified Credential • AWS</a>
+          </div>
+        </div>
+
+        <div class="cert-card reveal-on-scroll">
+          <div class="cert-icon">🤖</div>
+          <div class="cert-info">
+            <div class="cert-name">Generative AI: Introduction & Application</div>
+            <div class="cert-issuer">IBM</div>
+            <a href="https://www.ibm.com/training" target="_blank" rel="noopener noreferrer" class="cert-verify-link">✓ Verified Credential • IBM</a>
+          </div>
+        </div>
+
+        <div class="cert-card reveal-on-scroll">
+          <div class="cert-icon">🧠</div>
+          <div class="cert-info">
+            <div class="cert-name">Introduction to Artificial Intelligence</div>
+            <div class="cert-issuer">IBM</div>
+            <a href="https://www.ibm.com/training" target="_blank" rel="noopener noreferrer" class="cert-verify-link">✓ Verified Credential • IBM</a>
+          </div>
+        </div>
+
+        <div class="cert-card reveal-on-scroll">
+          <div class="cert-icon">⚡</div>
+          <div class="cert-info">
+            <div class="cert-name">Introduction to OpenAI</div>
+            <div class="cert-issuer">KodeKloud</div>
+            <a href="https://kodekloud.com/" target="_blank" rel="noopener noreferrer" class="cert-verify-link">✓ Verified Credential • KodeKloud</a>
+          </div>
+        </div>
+
+        <div class="cert-card reveal-on-scroll">
+          <div class="cert-icon">🎓</div>
+          <div class="cert-info">
+            <div class="cert-name">Sara's OpenAI and Gen AI</div>
+            <div class="cert-issuer">SRM University</div>
+            <a href="https://www.srmist.edu.in/" target="_blank" rel="noopener noreferrer" class="cert-verify-link">✓ Verified Credential • SRM</a>
+          </div>
+        </div>
+
+        <div class="cert-card reveal-on-scroll">
+          <div class="cert-icon">🐍</div>
+          <div class="cert-info">
+            <div class="cert-name">Python for Data Science</div>
+            <div class="cert-issuer">Infosys Springboard</div>
+            <a href="https://infyspringboard.onwingspan.com/" target="_blank" rel="noopener noreferrer" class="cert-verify-link">✓ Verified Credential • Infosys</a>
+          </div>
+        </div>
+
+        <div class="cert-card reveal-on-scroll">
+          <div class="cert-icon">💻</div>
+          <div class="cert-info">
+            <div class="cert-name">CLA: Programming Essentials In C</div>
+            <div class="cert-issuer">Cisco Networking Academy</div>
+            <a href="https://www.netacad.com/" target="_blank" rel="noopener noreferrer" class="cert-verify-link">✓ Verified Credential • Cisco</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION CUT DIVIDER: EDUCATION
+       ========================================================================= -->
+  <div class="section-cut-divider">
+    <div class="section-cut-line"></div>
+    <div class="section-cut-badge">🎓 ACADEMIC MILESTONES</div>
+  </div>
+
+  <!-- =========================================================================
+       Education Background Template
+       ========================================================================= -->
+  <section class="section" id="education" style="background: rgba(10, 13, 20, 0.4);">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-tag">🎓 Academic Honors</div>
+        <h2 class="section-title">Education <span class="gradient-text">Background</span></h2>
+        <p class="section-subtitle">Academic degrees with top-tier distinction CGPA in Computer Applications & Generative AI.</p>
+      </div>
+
+      <div class="education-grid">
+        
+        <!-- MCA Card -->
+        <div class="education-card reveal-on-scroll">
+          <div class="edu-card-top">
+            <div class="edu-icon">🎓</div>
+            <div class="edu-badge">2025 – 2027 (Pursuing)</div>
+          </div>
+          <h3 class="edu-degree">Master of Computer Applications in Gen AI (MCA)</h3>
+          <div class="edu-institution">SRM University, Kattankulathur</div>
+          <div class="edu-score-pill">
+            <span>CGPA:</span> <strong>8.76 / 10.0</strong>
+          </div>
+          <p class="edu-desc">
+            Specializing in Generative AI architectures, Large Language Model alignment, Multi-Agent systems, Vector Retrieval systems, and Advanced Data Structures & Algorithms.
+          </p>
+        </div>
+
+        <!-- BCA Card -->
+        <div class="education-card reveal-on-scroll">
+          <div class="edu-card-top">
+            <div class="edu-icon">💻</div>
+            <div class="edu-badge">2022 – 2025</div>
+          </div>
+          <h3 class="edu-degree">Bachelor of Computer Applications (BCA)</h3>
+          <div class="edu-institution">Aditya Degree College, Visakhapatnam</div>
+          <div class="edu-score-pill">
+            <span>CGPA:</span> <strong>8.33 / 10.0</strong>
+          </div>
+          <p class="edu-desc">
+            Core computer science fundamentals, Python programming, database management systems, software engineering, and applied artificial intelligence.
+          </p>
+        </div>
+
+        <!-- 12th Grade Card -->
+        <div class="education-card reveal-on-scroll">
+          <div class="edu-card-top">
+            <div class="edu-icon">📐</div>
+            <div class="edu-badge">2020 – 2022</div>
+          </div>
+          <h3 class="edu-degree">12th Grade (M.P.C)</h3>
+          <div class="edu-institution">A.P Model School and Junior College, Purushothapuram</div>
+          <div class="edu-score-pill">
+            <span>Percentage:</span> <strong>66.80%</strong>
+          </div>
+          <p class="edu-desc">
+            Mathematics, Physics, and Chemistry foundation with strong analytical and problem-solving coursework.
+          </p>
+        </div>
+
+        <!-- 10th Grade Card -->
+        <div class="education-card reveal-on-scroll">
+          <div class="edu-card-top">
+            <div class="edu-icon">🏆</div>
+            <div class="edu-badge">2019 – 2020</div>
+          </div>
+          <h3 class="edu-degree">10th Grade (Secondary School)</h3>
+          <div class="edu-institution">A.P Model School and Junior College, Purushothapuram</div>
+          <div class="edu-score-pill">
+            <span>Percentage:</span> <strong>97.33%</strong>
+          </div>
+          <p class="edu-desc">
+            Graduated with top academic honors (97.33%), demonstrating consistent excellence in foundational sciences and mathematics.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION CUT DIVIDER: PROFILES
+       ========================================================================= -->
+  <div class="section-cut-divider">
+    <div class="section-cut-line"></div>
+    <div class="section-cut-badge">🔗 RECRUITER HUBS</div>
+  </div>
+
+  <!-- =========================================================================
+       Profiles Hub Template
+       ========================================================================= -->
+  <section class="section" id="connect">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-tag">🔗 Professional Presence</div>
+        <h2 class="section-title">GitHub & <span class="gradient-text">LinkedIn Hub</span></h2>
+        <p class="section-subtitle">Review source code, explore production repositories, or connect for interview opportunities and technical evaluations.</p>
+      </div>
+
+      <div class="recruiter-connect-grid">
+        
+        <!-- GitHub Card -->
+        <div class="recruiter-connect-card github reveal-on-scroll">
+          <div class="recruiter-card-top">
+            <div class="recruiter-icon-badge github">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </div>
+            <span class="pitch-badge">💻 OPEN SOURCE CODE</span>
+          </div>
+          <div>
+            <h3 class="recruiter-card-title">GitHub Portfolio</h3>
+            <span class="recruiter-card-subtitle">@dhanarajesuru-png</span>
+          </div>
+          <p class="recruiter-card-desc">
+            Explore complete implementations for Agro AI-suite, Aura Mind, LangGraph Multi-Agent DAGs, PyTorch neural vision models, and FastAPI async microservices.
+          </p>
+          <div class="recruiter-stats-row">
+            <div class="recruiter-stat-item">
+              <span class="r-stat-val">Production</span>
+              <span class="r-stat-lbl">AI Repositories</span>
+            </div>
+            <div class="recruiter-stat-item">
+              <span class="r-stat-val">Clean & Typed</span>
+              <span class="r-stat-lbl">Python / JS Architecture</span>
+            </div>
+          </div>
+          <a href="https://github.com/dhanarajesuru-png" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width:100%;">
+            <span>Open GitHub Profile ↗</span>
+          </a>
+        </div>
+
+        <!-- LinkedIn Card -->
+        <div class="recruiter-connect-card linkedin reveal-on-scroll">
+          <div class="recruiter-card-top">
+            <div class="recruiter-icon-badge linkedin">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </div>
+            <span class="pitch-badge" style="background:rgba(10,102,194,0.15); color:#0a66c2;">💼 PROFESSIONAL NETWORK</span>
+          </div>
+          <div>
+            <h3 class="recruiter-card-title">LinkedIn Profile</h3>
+            <span class="recruiter-card-subtitle">/in/dhanaraj-esuru</span>
+          </div>
+          <p class="recruiter-card-desc">
+            Connect for technical interviews, engineering hiring, and collaborative GenAI roles. View verified credentials, academic milestones, and recommendations.
+          </p>
+          <div class="recruiter-stats-row">
+            <div class="recruiter-stat-item">
+              <span class="r-stat-val">Immediate</span>
+              <span class="r-stat-lbl">Recruiter Availability</span>
+            </div>
+            <div class="recruiter-stat-item">
+              <span class="r-stat-val">SRM University</span>
+              <span class="r-stat-lbl">Master's in Gen AI</span>
+            </div>
+          </div>
+          <a href="https://www.linkedin.com/in/dhanaraj-esuru" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width:100%;">
+            <span>Connect on LinkedIn ↗</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION CUT DIVIDER: CONTACT
+       ========================================================================= -->
+  <div class="section-cut-divider">
+    <div class="section-cut-line"></div>
+    <div class="section-cut-badge">📬 DIRECT CONTACT</div>
+  </div>
+
+  <!-- =========================================================================
+       Direct Contact Console Template
+       ========================================================================= -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-tag">📬 Direct Channel</div>
+        <h2 class="section-title">Get in Touch with <span class="gradient-text">Dhanaraj</span></h2>
+        <p class="section-subtitle">Open to Generative AI Engineer, LLM Developer, Machine Learning, and Full-Stack Engineering roles. Reach out for interviews or discussions.</p>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Contact Coordinates -->
+        <div class="contact-info-card reveal-on-scroll">
+          <h3 style="font-size: 1.4rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">Contact Coordinates</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem;">
+            Feel free to email me directly, give me a call, or connect on LinkedIn. I typically respond within 24 hours.
+          </p>
+
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div style="flex:1;">
+              <div class="contact-label">Email Address</div>
+              <div class="contact-value">dhanarajesuru@gmail.com</div>
+            </div>
+            <button class="btn btn-secondary btn-sm copy-btn" data-copy="dhanarajesuru@gmail.com" title="Copy Email">Copy</button>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">📱</div>
+            <div style="flex:1;">
+              <div class="contact-label">Phone / WhatsApp</div>
+              <div class="contact-value">+91-7815809310</div>
+            </div>
+            <button class="btn btn-secondary btn-sm copy-btn" data-copy="+917815809310" title="Copy Phone">Copy</button>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-label">Locations</div>
+              <div class="contact-value">Kattankulathur, Chennai / Visakhapatnam, India (Open to Relocation / Remote)</div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+            <a href="https://www.linkedin.com/in/dhanaraj-esuru" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="flex:1;">
+              <span>LinkedIn Profile</span>
+            </a>
+            <a href="https://github.com/dhanarajesuru-png" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="flex:1;">
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive Contact Form -->
+        <form class="contact-form reveal-on-scroll" id="contact-form">
+          <h3 style="font-size: 1.4rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">Send a Direct Message</h3>
+
+          <div class="form-group">
+            <label class="form-label" for="form-name">Name</label>
+            <input type="text" name="name" id="form-name" class="form-input" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="form-email">Email</label>
+            <input type="email" name="email" id="form-email" class="form-input" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="form-subject">Subject</label>
+            <input type="text" name="subject" id="form-subject" class="form-input" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="form-message">Message</label>
+            <textarea name="message" id="form-message" class="form-textarea" rows="4" placeholder="Tell me about your project or opportunity..." required></textarea>
+          </div>
+
+          <div id="form-success" style="display:none; color:#10b981; font-size:0.9rem; font-weight:600; padding:0.5rem 0;">
+            ✓ Thank you! Your message has been sent directly to Dhanaraj's inbox.
+          </div>
+          <div id="form-error" style="display:none; color:#f43f5e; font-size:0.9rem; font-weight:600; padding:0.5rem 0;">
+            ✕ Unable to send message right now. Please email directly at <a href="mailto:dhanarajesuru@gmail.com" style="color:#00f2fe; text-decoration:underline;">dhanarajesuru@gmail.com</a>.
+          </div>
+
+          <button type="submit" id="contact-submit-btn" class="btn btn-primary">
+            <span>Send Message</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Footer
+       ========================================================================= -->
+  <footer style="border-top: 1px solid var(--border-subtle); padding: 3rem 0 2rem; background: #06070a; color: #64748b; font-size: 0.9rem;">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1.5rem;">
+      <div style="display:flex; align-items:center; gap:0.75rem;">
+        <div class="logo-badge" style="width:30px; height:30px; font-size:0.85rem;">ED</div>
+        <span style="color:#cbd5e1; font-weight:600;">Esuru Dhanaraj</span>
+        <span>• Generative AI Engineer</span>
+      </div>
+      <div>
+        Designed for High-Impact Production GenAI © 2026. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       Floating AI Assistant Widget ("Ask Dhanaraj's AI Twin")
+       ========================================================================= -->
+  <button class="ai-widget-toggle" id="ai-widget-toggle" title="Chat with Dhanaraj's AI Twin" aria-label="Open AI Chat">
+    <span>🤖</span>
+  </button>
+
+  <div class="ai-chat-drawer" id="ai-chat-drawer">
+    <div class="chat-header">
+      <div class="chat-header-title">
+        <span class="chat-bot-avatar">🤖</span>
+        <div>
+          <div class="chat-bot-name">Dhanaraj AI Twin</div>
+          <div class="chat-bot-status">● Online • Portfolio Assistant</div>
+        </div>
+      </div>
+      <button class="chat-close-btn" id="chat-close-btn" aria-label="Close Chat">&times;</button>
+    </div>
+
+    <div class="chat-messages" id="chat-messages">
+      <div class="chat-bubble bot">
+        👋 Hi! I'm Esuru Dhanaraj's portfolio AI twin. Ask me anything about his <b>4 Industry Internships</b>, <b>Agro AI-suite</b> & <b>Aura Mind</b> projects, <b>SRM University MCA</b>, or <b>tech stack</b>!
+      </div>
+    </div>
+
+    <div class="chat-quick-prompts" id="chat-quick-prompts">
+      <button class="shortcut-btn" data-prompt="Why hire Dhanaraj?">Why hire him?</button>
+      <button class="shortcut-btn" data-prompt="Tell me about your internships">Internships</button>
+      <button class="shortcut-btn" data-prompt="Explain Agro AI-suite">Agro AI-suite</button>
+      <button class="shortcut-btn" data-prompt="Explain Aura Mind">Aura Mind</button>
+      <button class="shortcut-btn" data-prompt="What is his tech stack?">Tech Stack</button>
+      <button class="shortcut-btn" data-prompt="Education details">Education</button>
+    </div>
+
+    <div class="chat-input-area">
+      <input type="text" id="chat-input" class="chat-input" placeholder="Ask a question..." autocomplete="off" />
+      <button id="chat-send-btn" class="chat-send-btn" aria-label="Send">➤</button>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       Technical Architecture Modal
+       ========================================================================= -->
+  <div class="modal-backdrop" id="tech-modal">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">System Architecture</h3>
+        <button class="modal-close-btn" id="modal-close-btn">&times;</button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <!-- Injected dynamically by main.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       Authentic PDF Resume Modal
+       ========================================================================= -->
+  <div class="modal-backdrop" id="resume-modal">
+    <div class="modal-window" style="max-width: 900px; width: 92vw;">
+      <div class="modal-header">
+        <h3 class="modal-title">📄 Resume — Esuru Dhanaraj</h3>
+        <div style="display:flex; gap:0.5rem; align-items:center;">
+          <a href="assets/resume.pdf" download="Esuru_Dhanaraj_Resume.pdf" class="btn btn-primary btn-sm" id="download-resume-btn">
+            <span>📥 Download PDF</span>
+          </a>
+          <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+            <span>↗️ Fullscreen</span>
+          </a>
+          <button class="modal-close-btn" id="resume-close-btn">&times;</button>
+        </div>
+      </div>
+      <div class="modal-body" style="padding: 1rem; background: #0b0e14;">
+        <div class="resume-pdf-container">
+          <iframe src="assets/resume.pdf#toolbar=1&navpanes=0&view=FitH" class="resume-pdf-frame" title="Esuru Dhanaraj Official Resume"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Scripts -->
+  <script src="js/canvas-bg.js"></script>
+  <script src="js/ai-assistant.js?v=32.0"></script>
+  <script src="js/main.js?v=32.0"></script>
+  <script src="js/elastic-dp.js"></script>
+</body>
+</html>
