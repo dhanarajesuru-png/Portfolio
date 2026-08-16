@@ -9,7 +9,7 @@
 
 <p align="center">
   <b>Generative AI Engineer & Production LLM Architect</b><br>
-  Specializing in <b>Autonomous Multi-Agent DAGs (LangGraph)</b>, <b>Google Gemini GraphRAG</b>, and <b>High-Concurrency FastAPI Backends</b>.
+  Specializing in <b>Applied Deep Learning Diagnostics</b>, <b>Google Gemini RAG Pipelines</b>, and <b>High-Concurrency FastAPI Backends</b>.
 </p>
 
 </div>
@@ -36,11 +36,11 @@
 ┌────────────────────────────────────────────────────────────────────────────┐
 │                         CORE PRODUCTION STACK                              │
 ├────────────────────────────────────────────────────────────────────────────┤
-│  🤖 GenAI & Agents   : Google Gemini 1.5, LangGraph, Multi-Agent DAGs, CRAG│
+│  🤖 GenAI & LLMs     : Google Gemini 1.5, Prompt Engineering, RAG Pipelines│
 │  🧠 Deep Learning    : PyTorch, Transformers, Hugging Face, Scikit-learn   │
-│  ⚡ High-Concurrency : FastAPI (Async), Python 3.11+, SSE Streaming, Node │
-│  🗄️ Databases & RAG  : Neo4j (Cypher), Qdrant, SQLite WAL Mode, Redis      │
-│  🛡️ Security & Ops   : AWS (Bedrock, EC2, S3), AES-256, Docker, Ragas      │
+│  ⚡ High-Concurrency : FastAPI (Async), Python 3.11+, REST APIs, Node.js   │
+│  🗄️ Databases & RAG  : SQLite WAL Mode, TF-IDF RAG, Vector Search, SQL     │
+│  🛡️ Security & Ops   : AWS (Bedrock, EC2, S3), AES-256, Docker, PWA        │
 │  🐍 Fundamentals     : Python 3, C, JavaScript (ES6+), Algorithms, Linux   │
 └────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -70,17 +70,6 @@
   * Offline TF-IDF therapeutic exercise retrieval without network dependencies.
   * Client-side AES-256 encryption for mood logs, Web Speech voice journaling, and PDF clinical export.
 * **Tech Stack**: `React`, `Node.js / Express`, `Google Gemini API`, `TF-IDF RAG`, `AES-256`, `SQLite`
-
----
-
-### 3. 🤖 [Autonomous Multi-Agent DAG & Corrective RAG (CRAG)](https://github.com/dhanarajesuru-png)
-* **Problem**: Single-turn LLM pipelines hallucinate on complex multi-hop queries and lack reflection loops to verify retrieved facts.
-* **Solution**: Cyclical LangGraph state machine with document relevance evaluator nodes, query rewriting, and Tavily web search fallbacks.
-* **Key Features**:
-  * Stateful multi-agent graph with thread-level state persistence and checkpoints.
-  * **92% Hallucination Reduction** via Corrective RAG (CRAG) document evaluation.
-  * Structured Pydantic tool dispatch with deterministic schema validation.
-* **Tech Stack**: `LangGraph`, `Python 3.11`, `Gemini 1.5 Pro`, `Qdrant Vector DB`, `Pydantic`
 
 ---
 

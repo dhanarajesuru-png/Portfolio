@@ -145,25 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `
     },
-    vision: {
-      title: "🤖 Architecture: Autonomous Multi-Agent DAG & Corrective RAG",
-      content: `
-        <div style="display:flex; flex-direction:column; gap: 1.25rem;">
-          <p><b style="color:var(--accent-cyan);">Autonomous Multi-Agent DAG</b> is a stateful orchestration system built on LangGraph with self-corrective RAG reflection loops.</p>
-          <div class="modal-detail-card" style="border-color: rgba(0,242,254,0.35);">
-            <h4 style="color:var(--accent-cyan);">💡 Key Engineering Solutions</h4>
-            <ul>
-              <li><b>State Persistence & Checkpointing:</b> Thread-level state recovery and message graph branching across multi-step agent trajectories.</li>
-              <li><b>Dynamic Tool Calling:</b> Structured schema validation ensuring deterministic tool invocation with automatic fallback handlers.</li>
-              <li><b>Corrective RAG (CRAG):</b> Evaluator nodes grading retrieval relevance before generation to eliminate hallucinations in real-time.</li>
-            </ul>
-          </div>
-          <div style="display:flex; gap: 0.75rem; justify-content: flex-end; margin-top: 0.5rem;">
-            <a href="https://github.com/dhanarajesuru-png" target="_blank" class="btn btn-primary btn-sm">GitHub Repository</a>
-          </div>
-        </div>
-      `
-    },
     rag: {
       title: "📑 Research Breakdown: High-Throughput Gemini & FastAPI RAG",
       content: `

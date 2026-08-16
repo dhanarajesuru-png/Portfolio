@@ -63,7 +63,7 @@
     {
       keywords: ['skills', 'stack', 'technologies', 'tools', 'python', 'aws'],
       response: `<b>Technical Arsenal:</b><br>
-      • <b>AI & LLM Systems:</b> Google Gemini API, LangGraph, GraphRAG, Multi-Agent Systems, Transformers, PyTorch.<br>
+      • <b>AI & LLM Systems:</b> Google Gemini API, Prompt Engineering, RAG Pipelines, Transformers, PyTorch.<br>
       • <b>Backend & Full Stack:</b> Python, FastAPI (Async), Node.js, Express, React, SQLite (WAL mode), REST APIs.<br>
       • <b>Cloud & Security:</b> AWS Bedrock, AWS Cloud, Cyber Security, AES-256 Encryption, PWA.`
     }
