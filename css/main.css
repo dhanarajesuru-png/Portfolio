@@ -177,7 +177,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Global Canvas Background */
+/* Global Canvas Background (High-Fidelity 3D Neural Nexus) */
 #neural-canvas {
   position: fixed;
   top: 0;
@@ -186,7 +186,12 @@ body {
   height: 100vh;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.55;
+  opacity: 0.85;
+  transition: opacity 0.5s ease;
+}
+
+[data-theme="light"] #neural-canvas {
+  opacity: 0.65;
 }
 
 /* Ambient glow spheres */
