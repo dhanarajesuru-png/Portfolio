@@ -674,8 +674,8 @@
 
 .pitch-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.75rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem 2.5rem;
   margin-top: 1.25rem;
   padding-top: 1.25rem;
   border-top: 1px solid var(--border-subtle);
@@ -684,7 +684,7 @@
 .pitch-item {
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
+  gap: 0.55rem;
 }
 
 .pitch-label {
@@ -701,6 +701,46 @@
   color: #e2e8f0;
   font-weight: 500;
   line-height: 1.55;
+}
+
+.pitch-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.38rem;
+}
+
+.pitch-list li {
+  position: relative;
+  padding-left: 1.15rem;
+  font-size: 0.91rem;
+  line-height: 1.45;
+  color: #e2e8f0;
+  font-weight: 450;
+}
+
+.pitch-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent-cyan);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+[data-theme="light"] .pitch-list li {
+  color: #334155;
+}
+
+[data-theme="light"] .pitch-list li::before {
+  color: #0284c7;
+}
+
+[data-theme="light"] .pitch-list li strong {
+  color: #0f172a;
 }
 
 /* --------------------------------------------------------------------------
