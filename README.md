@@ -16,7 +16,7 @@
 
 ---
 
-## ⏱️ 30-Second Recruiter Summary
+## 💼 Recruiter Executive Summary
 
 | Metric / Qualification | Details |
 |---|---|
