@@ -56,43 +56,23 @@
   let nexusNodeData = [];
   let impulses = [];
 
-  // Theme configuration
-  function getThemeColors() {
-    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-    return isLight
-      ? {
-          fog: 0xf4f7fb,
-          crestColor: new THREE.Color(0x0284c7), // Sky 600
-          slopeColor: new THREE.Color(0x4f46e5), // Indigo 600
-          troughColor: new THREE.Color(0x7c3aed), // Violet 600
-          lineColor: new THREE.Color(0x0284c7),
-          lineOpacity: 0.12,
-          nodeColorA: new THREE.Color(0x0284c7),
-          nodeColorB: new THREE.Color(0x7c3aed),
-          synapseColor: new THREE.Color(0x0284c7),
-          synapseOpacity: 0.15,
-          impulseColor: new THREE.Color(0x38bdf8),
-          dustColor: new THREE.Color(0x64748b),
-          dustOpacity: 0.35,
-          pointSize: 18,
-        }
-      : {
-          fog: 0x07090e,
-          crestColor: new THREE.Color(0x00f2fe), // Vibrant Cyan
-          slopeColor: new THREE.Color(0x38bdf8), // Electric Blue
-          troughColor: new THREE.Color(0x8a2be2), // Neon Purple
-          lineColor: new THREE.Color(0x00f2fe),
-          lineOpacity: 0.18,
-          nodeColorA: new THREE.Color(0x00f2fe),
-          nodeColorB: new THREE.Color(0xd946ef),
-          synapseColor: new THREE.Color(0x38bdf8),
-          synapseOpacity: 0.22,
-          impulseColor: new THREE.Color(0xffffff),
-          dustColor: new THREE.Color(0x38bdf8),
-          dustOpacity: 0.55,
-          pointSize: 22,
-        };
-  }
+  // Permanent Single Color Palette (High-Contrast 3D Visualization)
+  const PALETTE = {
+    fog: 0xffffff,
+    crestColor: new THREE.Color(0x0284c7), // Sky 600
+    slopeColor: new THREE.Color(0x4f46e5), // Electric Indigo 600
+    troughColor: new THREE.Color(0x7c3aed), // Violet 600
+    lineColor: new THREE.Color(0x0284c7),
+    lineOpacity: 0.22,
+    nodeColorA: new THREE.Color(0x0284c7),
+    nodeColorB: new THREE.Color(0x9333ea),
+    synapseColor: new THREE.Color(0x4f46e5),
+    synapseOpacity: 0.25,
+    impulseColor: new THREE.Color(0x0284c7),
+    dustColor: new THREE.Color(0x64748b),
+    dustOpacity: 0.4,
+    pointSize: 18,
+  };
 
   // Create soft radial glow sprite texture
   function createGlowTexture() {
@@ -103,8 +83,8 @@
 
     const gradient = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
     gradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
-    gradient.addColorStop(0.2, 'rgba(0, 242, 254, 0.85)');
-    gradient.addColorStop(0.55, 'rgba(138, 43, 226, 0.35)');
+    gradient.addColorStop(0.2, 'rgba(2, 132, 199, 0.85)');
+    gradient.addColorStop(0.55, 'rgba(124, 58, 237, 0.35)');
     gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
 
     ctx.fillStyle = gradient;
@@ -117,8 +97,7 @@
 
   function init() {
     scene = new THREE.Scene();
-    const colors = getThemeColors();
-    scene.fog = new THREE.FogExp2(colors.fog, 0.00065);
+    scene.fog = new THREE.FogExp2(PALETTE.fog, 0.00065);
 
     camera = new THREE.PerspectiveCamera(58, width / height, 1, 4200);
     camera.position.set(0, 180, 550);
@@ -137,24 +116,15 @@
     glowTexture = createGlowTexture();
 
     // Build layers
-    buildWaveHorizon(colors);
-    buildNeuralNexus(colors);
-    buildVolumetricDust(colors);
+    buildWaveHorizon(PALETTE);
+    buildNeuralNexus(PALETTE);
+    buildVolumetricDust(PALETTE);
 
     // Event Listeners
     window.addEventListener('resize', onResize);
     window.addEventListener('mousemove', onMouseMove, { passive: true });
     window.addEventListener('scroll', onScroll, { passive: true });
     document.addEventListener('visibilitychange', onVisibilityChange);
-
-    // Watch for theme toggle
-    const themeObserver = new MutationObserver(() => {
-      updateThemeMaterials();
-    });
-    themeObserver.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ['data-theme'],
-    });
 
     animate(0);
   }
@@ -191,8 +161,8 @@
       map: glowTexture,
       vertexColors: true,
       transparent: true,
-      opacity: 0.85,
-      blending: THREE.AdditiveBlending,
+      opacity: 0.7,
+      blending: THREE.NormalBlending,
       depthWrite: false,
     });
 
@@ -221,7 +191,7 @@
       color: colors.lineColor,
       transparent: true,
       opacity: colors.lineOpacity,
-      blending: THREE.AdditiveBlending,
+      blending: THREE.NormalBlending,
       depthWrite: false,
     });
 
@@ -277,8 +247,8 @@
       map: glowTexture,
       vertexColors: true,
       transparent: true,
-      opacity: 0.95,
-      blending: THREE.AdditiveBlending,
+      opacity: 0.85,
+      blending: THREE.NormalBlending,
       depthWrite: false,
     });
 
@@ -312,7 +282,7 @@
       color: colors.synapseColor,
       transparent: true,
       opacity: colors.synapseOpacity,
-      blending: THREE.AdditiveBlending,
+      blending: THREE.NormalBlending,
       depthWrite: false,
     });
 
@@ -349,8 +319,8 @@
       map: glowTexture,
       color: colors.impulseColor,
       transparent: true,
-      opacity: 0.95,
-      blending: THREE.AdditiveBlending,
+      opacity: 0.85,
+      blending: THREE.NormalBlending,
       depthWrite: false,
     });
 
@@ -380,48 +350,12 @@
       color: colors.dustColor,
       transparent: true,
       opacity: colors.dustOpacity,
-      blending: THREE.AdditiveBlending,
+      blending: THREE.NormalBlending,
       depthWrite: false,
     });
 
     dustPoints = new THREE.Points(dustGeo, dustMat);
     scene.add(dustPoints);
-  }
-
-  // Update Three.js materials when user changes theme
-  function updateThemeMaterials() {
-    const colors = getThemeColors();
-    if (scene.fog) {
-      scene.fog.color.setHex(colors.fog);
-    }
-
-    if (wavePoints) {
-      wavePoints.material.size = colors.pointSize;
-      wavePoints.material.needsUpdate = true;
-    }
-
-    if (waveLineSegments) {
-      waveLineSegments.material.color.copy(colors.lineColor);
-      waveLineSegments.material.opacity = colors.lineOpacity;
-      waveLineSegments.material.needsUpdate = true;
-    }
-
-    if (nexusConnections) {
-      nexusConnections.material.color.copy(colors.synapseColor);
-      nexusConnections.material.opacity = colors.synapseOpacity;
-      nexusConnections.material.needsUpdate = true;
-    }
-
-    if (impulseParticles) {
-      impulseParticles.material.color.copy(colors.impulseColor);
-      impulseParticles.material.needsUpdate = true;
-    }
-
-    if (dustPoints) {
-      dustPoints.material.color.copy(colors.dustColor);
-      dustPoints.material.opacity = colors.dustOpacity;
-      dustPoints.material.needsUpdate = true;
-    }
   }
 
   // --- INTERACTIVE EVENTS ---
@@ -474,7 +408,6 @@
     camera.lookAt(0, -40 - scrollProgress * 60, -400);
 
     // 1. Update 3D Wave Horizon
-    const colors = getThemeColors();
     let idx = 0;
     for (let iz = 0; iz < GRID_ROWS; iz++) {
       for (let ix = 0; ix < GRID_COLS; ix++) {
@@ -503,9 +436,9 @@
         const normY = Math.min(1, Math.max(0, (y + 220) / 160));
         let vertColor;
         if (normY > 0.5) {
-          vertColor = colors.slopeColor.clone().lerp(colors.crestColor, (normY - 0.5) * 2);
+          vertColor = PALETTE.slopeColor.clone().lerp(PALETTE.crestColor, (normY - 0.5) * 2);
         } else {
-          vertColor = colors.troughColor.clone().lerp(colors.slopeColor, normY * 2);
+          vertColor = PALETTE.troughColor.clone().lerp(PALETTE.slopeColor, normY * 2);
         }
 
         waveColors[idx * 3] = vertColor.r;

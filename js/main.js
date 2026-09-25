@@ -3,33 +3,6 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 0. Theme Settings (Light / Dark Mode Controller)
-  const themeToggleBtn = document.getElementById('theme-toggle-btn');
-  const themeIcon = document.getElementById('theme-icon');
-  const savedTheme = localStorage.getItem('portfolio-theme') || 'light';
-
-  function applyTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('portfolio-theme', theme);
-    if (themeIcon) {
-      themeIcon.textContent = theme === 'light' ? '☀️' : '🌙';
-    }
-    if (themeToggleBtn) {
-      themeToggleBtn.setAttribute('title', `Switch to ${theme === 'light' ? 'Dark' : 'Light'} Mode`);
-    }
-  }
-
-  // Initialize theme
-  applyTheme(savedTheme);
-
-  if (themeToggleBtn) {
-    themeToggleBtn.addEventListener('click', () => {
-      const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-      const nextTheme = currentTheme === 'light' ? 'dark' : 'light';
-      applyTheme(nextTheme);
-    });
-  }
-
   // 1. Header scroll effect
   const siteHeader = document.querySelector('.site-header');
   window.addEventListener('scroll', () => {
